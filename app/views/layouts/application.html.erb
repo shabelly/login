@@ -1,19 +1,94 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en-US">
+
+
 <head>
-  <title>Plataforma V1.1</title>
+<meta charset="UTF-8" />
+  <title>Plataforma</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+ <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/lection.js"></script>
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if IE 6]>
+<script src="js/belatedPNG.js"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+
 </head>
+
 <body>
+<div id="wrap">
+
+<nav id="mainnav">
+
+<h1 id="textlogo">
+Adaro<span>Encina</span>
+</h1>
+<ul>
+
+	<li><a href="index.html">Inicio</a></li>
+    <li class="active"><a href="services.html">Bodega</a></li>
+    <li><a href="#">Venta</a></li>
+    <li><a href="#">Analisis de costo</a></li>
+    <li><a href="#">Soporte</a></li>
+
+
+</ul>
+</nav>
+
+<section id="content" class="normalpage"><section id="page"><section id="fours">
+
+
 <div id="container">
 	<div id="user_nav">
+	<% if current_user%>
+	<% link_to "Editar Perfil", edit_user_path(:current) %>|
+	<%= link_to "Desloguearse", logout_path%>
+	<% else %>
 	<%= link_to "Registrarse" , new_user_path %>|
 	<%= link_to "Ingresar" , login_path %>
+	<% end %>
 	</div>
 </div>
+<div id="messeges">
+<% flash.each do |key, value| %>
+<%= content_tag(:div, value, :class => "flash #{key}")%>
+<%end%>
+
+</div>
 <%= yield %>
+ 
+</section>
+
+<article class="post">
+</article>
+</section>
+</section>
+</div>
+
+<footer>
+
+<div id="bottom">
+<a href="#">Inicio</a> | <a href="#">Sobre Nosotros</a> | <a href="#">Contactanos</a> |<a href="#"> Soporte</a> | <a href="#">Productos</a> | <a href="#">Servicios</a>
+<div class="clear"></div>
+</div>
+<div id="credits">
+2012 Derechos reservados  <a href="h#"></a> Vladimir Encina, Evelyn Adaro</div>
+</footer>
+
 
 </body>
+
 </html>
+
+
+
+
