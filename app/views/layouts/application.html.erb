@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plataforma V1.1</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="container">
+	<div id="user_nav">
+	<%= link_to "Registrarse" , new_user_path %>|
+	<%= link_to "Ingresar" , login_path %>
+	</div>
+</div>
+<%= yield %>
+
+</body>
+</html>

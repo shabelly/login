@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rut:</b>
+  <%= @persona.rut %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @persona.nombre %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @persona.user %>
+</p>
+
+<p>
+  <b>Pass:</b>
+  <%= @persona.pass %>
+</p>
+
+
+<%= link_to 'Edit', edit_persona_path(@persona) %> |
+<%= link_to 'Back', personas_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rut: MyString
+  nombre: MyString
+  user: MyString
+  pass: MyString
+
+two:
+  rut: MyString
+  nombre: MyString
+  user: MyString
+  pass: MyString
