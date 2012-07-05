@@ -6,20 +6,20 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to 'http://localhost:3000', :notice => "Se a creado exitosamente el User"
+      redirect_to root_url, :notice => "Se a creado exitosamente el User"
     else
       render :action => 'new'
     end
   end
 
   def edit
-    @user = User.find(params[:id])
-  end
-
+    @user = current_user
+  end 
+  
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice  => "Successfully updated user."
+      redirect_to root_url, :notice  => "El perfil se a actualizado exitosamente"
     else
       render :action => 'edit'
     end

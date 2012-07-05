@@ -33,6 +33,7 @@ GEM
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
     builder (2.1.2)
+    cancan (1.6.8)
     dynamic_form (1.1.4)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -83,6 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic
+  cancan
   dynamic_form
   mocha
   nifty-generators

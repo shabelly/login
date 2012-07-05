@@ -50,7 +50,7 @@ Adaro<span>Encina</span>
 <div id="container">
 	<div id="user_nav">
 	<% if current_user%>
-	<% link_to "Editar Perfil", edit_user_path(:current) %>|
+	<%= link_to "Editar Perfil", edit_user_path(:current) %>|
 	<%= link_to "Desloguearse", logout_path%>
 	<% else %>
 	<%= link_to "Registrarse" , new_user_path %>|

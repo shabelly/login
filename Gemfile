@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'authlogic'#Plugin para ocupar la el logueo
 gem 'nifty-generators', :group => :development # Generador como scaffold
 gem 'dynamic_form' # arregla el error de f.error.form
+gem 'cancan'
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -10,13 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120704004450) do
+ActiveRecord::Schema.define(:version => 20120705144946) do
+
+  create_table "cargos", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "personas", :force => true do |t|
     t.string   "rut"
     t.string   "nombre"
     t.string   "user"
     t.string   "pass"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20120704004450) do
     t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cargo_nombre"
   end
 
 end

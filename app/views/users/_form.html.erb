@@ -1,3 +1,4 @@
+
 <%= form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
@@ -8,7 +9,26 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
-  <p>
+	  <p>
+<% for cargo in Cargo.find(:all)%>
+  
+	<div>
+	
+	<%= radio_button_tag(:cargo_nombre, "cargos")%>
+	<%= label_tag (cargo.nombre)%>
+	
+	
+	<% # Utilizacion del check box [funcionando]
+	%>
+	
+	<%= #check_box_tag "user[cargo_nombre][]", cargo.nombre
+	 %>
+	<%= #cargo.nombre 
+	%>
+	</-->
+	</div>
+ <% end%>
+  	
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </p>
