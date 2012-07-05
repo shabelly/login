@@ -2,7 +2,16 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def index
+    @users = User.all
 
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @cargos }
+    end
+  end
+  
   def create
     @user = User.new(params[:user])
     if @user.save

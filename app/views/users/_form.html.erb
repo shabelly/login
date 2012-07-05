@@ -14,17 +14,10 @@
   
 	<div>
 	
-	<%= radio_button_tag(:cargo_nombre, "cargos")%>
+	
+	<%= f.radio_button :cargo_nombre, cargo.nombre%>
 	<%= label_tag (cargo.nombre)%>
-	
-	
-	<% # Utilizacion del check box [funcionando]
-	%>
-	
-	<%= #check_box_tag "user[cargo_nombre][]", cargo.nombre
-	 %>
-	<%= #cargo.nombre 
-	%>
+
 	</-->
 	</div>
  <% end%>
