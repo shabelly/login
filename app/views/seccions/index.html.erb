@@ -1,0 +1,25 @@
+<h1>Listing seccions</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @seccions.each do |seccion| %>
+  <tr>
+    <td><%= seccion.codigo %></td>
+    <td><%= seccion.descripcion %></td>
+    <td><%= link_to 'Show', seccion %></td>
+    <td><%= link_to 'Edit', edit_seccion_path(seccion) %></td>
+    <td><%= link_to 'Destroy', seccion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Seccion', new_seccion_path %>

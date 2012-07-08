@@ -1,4 +1,20 @@
 Login::Application.routes.draw do |map|
+  resources :tipo_items
+
+  resources :modelos
+
+  resources :seccions
+
+  resources :documentos
+
+  resources :proveedors
+
+  resources :unidads
+
+  resources :items
+
+  resources :herramienta
+
   resources :cargos
 
   map.login "login", :controller => "user_sessions", :action => "new"

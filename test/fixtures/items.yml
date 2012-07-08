@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codigo: MyString
+  nombre: MyString
+  sección_codigo: MyString
+  marca: MyString
+  unidad_codigo: MyString
+  proveedor_codigo: MyString
+  documento_codigo: MyString
+  medida: 1.5
+
+two:
+  codigo: MyString
+  nombre: MyString
+  sección_codigo: MyString
+  marca: MyString
+  unidad_codigo: MyString
+  proveedor_codigo: MyString
+  documento_codigo: MyString
+  medida: 1.5

@@ -10,12 +10,10 @@
     <%= f.text_field :email %>
   </p>
 	  <p>
-<% for cargo in Cargo.find(:all)%>
-  
+	
+<% for cargo in Cargo.find(:all)%>  
 	<div>
-	
-	
-	<%= f.radio_button :cargo_nombre, cargo.nombre%>
+	<%= f.radio_button :cargo_nombre, cargo.nombre %>
 	<%= label_tag (cargo.nombre)%>
 
 	</-->

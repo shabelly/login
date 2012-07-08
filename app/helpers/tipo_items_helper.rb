@@ -1,0 +1,2 @@
+module TipoItemsHelper
+end

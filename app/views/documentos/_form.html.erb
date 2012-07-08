@@ -1,0 +1,25 @@
+<%= form_for(@documento) do |f| %>
+  <% if @documento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@documento.errors.count, "error") %> prohibited this documento from being saved:</h2>
+
+      <ul>
+      <% @documento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

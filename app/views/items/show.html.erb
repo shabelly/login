@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @item.codigo %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @item.nombre %>
+</p>
+
+<p>
+  <b>Sección codigo:</b>
+  <%= @item.sección_codigo %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @item.marca %>
+</p>
+
+<p>
+  <b>Unidad codigo:</b>
+  <%= @item.unidad_codigo %>
+</p>
+
+<p>
+  <b>Proveedor codigo:</b>
+  <%= @item.proveedor_codigo %>
+</p>
+
+<p>
+  <b>Documento codigo:</b>
+  <%= @item.documento_codigo %>
+</p>
+
+<p>
+  <b>Medida:</b>
+  <%= @item.medida %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

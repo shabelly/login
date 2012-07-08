@@ -10,10 +10,55 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120705144946) do
+ActiveRecord::Schema.define(:version => 20120708005909) do
 
   create_table "cargos", :force => true do |t|
     t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "documentos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "codigo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "herramienta", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
+    t.string   "codSeccion"
+    t.string   "medida"
+    t.string   "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "item_tipo_items", :force => true do |t|
+    t.string   "item_codigo"
+    t.string   "tipoItem_codigo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
+    t.string   "seccion_codigo"
+    t.string   "marca"
+    t.string   "unidad_codigo"
+    t.string   "proveedor_codigo"
+    t.string   "documento_codigo"
+    t.float    "medida"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "modelos", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
+    t.string   "tipoItem_codigo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,6 +68,38 @@ ActiveRecord::Schema.define(:version => 20120705144946) do
     t.string   "nombre"
     t.string   "user"
     t.string   "pass"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "proveedors", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.string   "ciudad"
+    t.string   "pais"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seccions", :force => true do |t|
+    t.string   "codigo"
+    t.string   "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipo_items", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "unidads", :force => true do |t|
+    t.string   "codigo"
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
