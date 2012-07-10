@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120708005909) do
+ActiveRecord::Schema.define(:version => 20120710053551) do
 
   create_table "cargos", :force => true do |t|
     t.string   "nombre"
@@ -45,14 +45,14 @@ ActiveRecord::Schema.define(:version => 20120708005909) do
   create_table "items", :force => true do |t|
     t.string   "codigo"
     t.string   "nombre"
-    t.string   "seccion_codigo"
     t.string   "marca"
-    t.string   "unidad_codigo"
-    t.string   "proveedor_codigo"
-    t.string   "documento_codigo"
     t.float    "medida"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "seccion_id"
+    t.integer  "unidad_id"
+    t.integer  "proveedor_id"
+    t.integer  "documento_id"
   end
 
   create_table "modelos", :force => true do |t|

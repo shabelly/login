@@ -12,38 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :codigo %><br />
+    <%= f.label :codigo %> (Ej. E003)<br />
     <%= f.text_field :codigo %>
   </div>
   <div class="field">
-    <%= f.label :nombre %><br />
+    <%= f.label :nombre %> (Ej. Martillo)<br />
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
-    <%= f.label :sección_codigo %><br />
-    <%= f.text_field :sección_codigo %>
+    <%= f.label :seccion_id %> (Ej. A1)<br />
+    <%= f.text_field :seccion_id %>
   </div>
   <div class="field">
-    <%= f.label :marca %><br />
+    <%= f.label :marca %> (Ej. Stanley)<br />
     <%= f.text_field :marca %>
   </div>
+
   <div class="field">
-    <%= f.label :unidad_codigo %><br />
-    <%= f.text_field :unidad_codigo %>
+   <%= f.label :proveedor_id %> (Ej. )<br />
+   <%= collection_select(:item, :proveedor_id, Proveedor.find(:all), :id,:nombre, {  :prompt => 'Seleccione el proveedor por favor' })%> 
   </div>
+
   <div class="field">
-    <%= f.label :proveedor_codigo %><br />
-    <%= f.text_field :proveedor_codigo %>
+    <%= f.label :documento_id %><br />
+    <%= f.text_field :documento_id %>
   </div>
+
   <div class="field">
-    <%= f.label :documento_codigo %><br />
-    <%= f.text_field :documento_codigo %>
-  </div>
-  <div class="field">
-    <%= f.label :medida %><br />
-    <%= f.text_field :medida %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  	<%= select(:item, :unidad_id,Unidad.all.collect {|u| [u.nombre, u.id]}, {:include_black => 'None'} )%> 
+
+  </div>    
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
