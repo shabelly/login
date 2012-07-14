@@ -1,4 +1,6 @@
 Login::Application.routes.draw do |map|
+  get "home/index"
+
   resources :tipo_items
 
   resources :modelos
@@ -10,7 +12,7 @@ Login::Application.routes.draw do |map|
   resources :proveedors
 
   resources :unidads
-
+  
   resources :items
 
   resources :herramienta
@@ -26,6 +28,13 @@ Login::Application.routes.draw do |map|
 
   resources :personas
 
+  match "bodega"=> 'home#bodega'
+  
+  match "venta"=> 'home#venta'
+  
+  match "adc"=> 'home#adc'
+  
+  match "soporte"=> 'home#soporte'  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -75,7 +84,10 @@ Login::Application.routes.draw do |map|
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "personas#index"
+  # root :to => "personas#index"
+  #root :to => "homes#show", :id => '1'
+  root :to => "home#index" 
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

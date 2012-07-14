@@ -34,11 +34,11 @@ Adaro<span>Encina</span>
 </h1>
 <ul>
 
-	<li><a href="index.html">Inicio</a></li>
-    <li class="active"><a href="services.html">Bodega</a></li>
-    <li><a href="#">Venta</a></li>
-    <li><a href="#">Analisis de costo</a></li>
-    <li><a href="#">Soporte</a></li>
+	<li class="active"><%= link_to "Inicio", root_path %></li>
+    <li ><%= link_to "Bodega", bodega_path %></li>
+    <li ><%= link_to "Venta", venta_path %></li>
+    <li><%= link_to "Analisis de costos", adc_path %></li>
+    <li><%= link_to "Soporte", soporte_path %></li>
 
 
 </ul>
@@ -54,8 +54,10 @@ Adaro<span>Encina</span>
 	<%= link_to "Desloguearse", logout_path%>
 	<% else %>
 	<%= link_to "Registrarse" , new_user_path %>|
-	<%= link_to "Ingresar" , login_path %>
+	<%= link_to "Ingresar" , login_path %>|
+
 	<% end %>
+
 	</div>
 </div>
 <div id="messeges">

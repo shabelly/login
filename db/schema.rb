@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710053551) do
+ActiveRecord::Schema.define(:version => 20120710180601) do
 
   create_table "cargos", :force => true do |t|
     t.string   "nombre"
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(:version => 20120710053551) do
     t.string   "codSeccion"
     t.string   "medida"
     t.string   "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "homes", :force => true do |t|
+    t.string   "up_titulo"
+    t.text     "up_cont"
+    t.string   "med_titulo"
+    t.string   "meduno_titulo"
+    t.text     "meduno_cont"
+    t.string   "meddos_titulo"
+    t.text     "meddos_cont"
+    t.string   "medtres_titulo"
+    t.text     "medtres_cont"
+    t.string   "down_titulo"
+    t.string   "downuno_titulo"
+    t.text     "downuno_cont"
+    t.string   "downdos_titulo"
+    t.text     "downdos_cont"
+    t.string   "downtres_titulo"
+    t.text     "downtres_cont"
+    t.string   "downcuatro_titulo"
+    t.text     "downcuatro_cont"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

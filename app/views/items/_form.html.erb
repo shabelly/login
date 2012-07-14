@@ -19,10 +19,13 @@
     <%= f.label :nombre %> (Ej. Martillo)<br />
     <%= f.text_field :nombre %>
   </div>
+
   <div class="field">
-    <%= f.label :seccion_id %> (Ej. A1)<br />
-    <%= f.text_field :seccion_id %>
+   <%= f.label :seccion_id %> (Ej. )<br />
+   <%= collection_select(:item, :seccion_id, Seccion.find(:all), :id,:descripcion, {  :prompt => 'Seleccione la sección' })%>
+   <%= link_to 'Crear Sección', new_seccion_path%>  
   </div>
+
   <div class="field">
     <%= f.label :marca %> (Ej. Stanley)<br />
     <%= f.text_field :marca %>
@@ -30,19 +33,31 @@
 
   <div class="field">
    <%= f.label :proveedor_id %> (Ej. )<br />
-   <%= collection_select(:item, :proveedor_id, Proveedor.find(:all), :id,:nombre, {  :prompt => 'Seleccione el proveedor por favor' })%> 
+   <%= collection_select(:item, :proveedor_id, Proveedor.find(:all), :id,:nombre, {  :prompt => 'Seleccione el proveedor' })%>
+   <%= link_to 'Crear Proveedor', new_proveedor_path%>  
   </div>
 
   <div class="field">
-    <%= f.label :documento_id %><br />
+    <%= f.label 'N° documento :'%><br />
     <%= f.text_field :documento_id %>
   </div>
+  
+<table>
+<tr>
+	<td><%= f.label :medida %></td>
+	<td><%= f.label :unidad_id %></td>
+</tr>
 
-  <div class="field">
-  	<%= select(:item, :unidad_id,Unidad.all.collect {|u| [u.nombre, u.id]}, {:include_black => 'None'} )%> 
+<tr>
+	<td> <%= f.text_field :medida %></td>
+	<td><%= select(:item, :unidad_id,Unidad.all.collect {|u| [u.nombre, u.id]}, {:prompt=> 'Seleccione la unidad'} )%>
+  	<%= link_to 'Crear Unidad', new_unidad_path%> </td>
+</tr>
+  
+</table>
 
-  </div>    
 	  <div class="actions">
 	    <%= f.submit %>
 	  </div>
+
 	<% end %>
