@@ -1,0 +1,79 @@
+/* code */
+		
+			thead td{
+				border-bottom: 1px solid #ccc !important;
+				font-weight:bold;
+				}
+		
+			code, 
+			pre{
+				margin:10px 15px;
+				font-family:"Courier New", Courier, monospace;
+				font-size:11px;
+				color:#3366FF;
+				padding:5px;
+				white-space:pre;
+				}
+		
+	
+		/* General table styling... */
+		
+			table{
+				margin:15px;
+				border-right: 1px dotted #ccc;
+				border-bottom: 1px dotted #ccc;
+				}
+				
+			tr td{
+				border-top: 1px dotted #ccc;
+				border-left: 1px dotted #ccc;
+				}
+				
+			.no-border,
+			.no-border tr,
+			.no-border td
+				{
+				border:none;
+				}
+				
+		/* specific row styling for the table-row table ... */
+		
+			.row-highlight{
+				border:1px solid red !important;
+				background:#ccc;
+				}
+				
+			.highlight-selected{
+				background-image:url('/images/highlight.gif') !important;
+				}
+		/* specific row styling for the lists ... */
+		
+			#list1 ul,
+			#list1 li,
+			#list2 ul,
+			#list2 li
+				{
+				border:1px solid #fff;
+				width:auto;
+				}
+				
+			.list-highlight{
+				border:1px solid red !important;
+				}
+				
+		/* specific row styling for the - but NOT highlight related. Just to make the look pretty  ... */
+		
+			#list1 li,
+			#list2 li{
+				padding:2px;
+				cursor:default;
+				}
+	
+			.red {
+				color:#f00;
+				font-style:italic;
+				}
+				
+			.highlight{
+				background-image:url(/images/highlight.gif);
+				}
