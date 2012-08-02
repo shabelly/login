@@ -1,0 +1,25 @@
+<h1>Listing r_is</h1>
+
+<table>
+  <tr>
+    <th>Cantidad</th>
+    <th>Prioridad</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @r_is.each do |r_i| %>
+  <tr>
+    <td><%= r_i.cantidad %></td>
+    <td><%= r_i.prioridad %></td>
+    <td><%= link_to 'Show', r_i %></td>
+    <td><%= link_to 'Edit', edit_r_i_path(r_i) %></td>
+    <td><%= link_to 'Destroy', r_i, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New R i', new_r_i_path %>

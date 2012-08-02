@@ -1,0 +1,25 @@
+<h1>Listing telefono_proveedors</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Fono</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @telefono_proveedors.each do |telefono_proveedor| %>
+  <tr>
+    <td><%= telefono_proveedor.nombre %></td>
+    <td><%= telefono_proveedor.fono %></td>
+    <td><%= link_to 'Show', telefono_proveedor %></td>
+    <td><%= link_to 'Edit', edit_telefono_proveedor_path(telefono_proveedor) %></td>
+    <td><%= link_to 'Destroy', telefono_proveedor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Telefono proveedor', new_telefono_proveedor_path %>

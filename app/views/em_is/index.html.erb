@@ -1,0 +1,21 @@
+<h1>Listing em_is</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @em_is.each do |em_i| %>
+  <tr>
+    <td><%= link_to 'Show', em_i %></td>
+    <td><%= link_to 'Edit', edit_em_i_path(em_i) %></td>
+    <td><%= link_to 'Destroy', em_i, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Em i', new_em_i_path %>

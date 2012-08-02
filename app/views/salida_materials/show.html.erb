@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Num ot:</b>
+  <%= @salida_material.num_ot %>
+</p>
+
+<p>
+  <b>Centro costo:</b>
+  <%= @salida_material.centro_costo %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @salida_material.fecha %>
+</p>
+
+<p>
+  <b>Observacion:</b>
+  <%= @salida_material.observacion %>
+</p>
+
+<p>
+  <b>Usuario id d:</b>
+  <%= @salida_material.usuario_id_d %>
+</p>
+
+<p>
+  <b>Usuario id s:</b>
+  <%= @salida_material.usuario_id_s %>
+</p>
+
+
+<%= link_to 'Edit', edit_salida_material_path(@salida_material) %> |
+<%= link_to 'Back', salida_materials_path %>

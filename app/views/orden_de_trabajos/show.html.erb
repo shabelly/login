@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @orden_de_trabajo.descripcion %>
+</p>
+
+<p>
+  <b>Fecha recepcion:</b>
+  <%= @orden_de_trabajo.fecha_recepcion %>
+</p>
+
+<p>
+  <b>Num oc cliente:</b>
+  <%= @orden_de_trabajo.num_oc_cliente %>
+</p>
+
+<p>
+  <b>Empresa cliente:</b>
+  <%= @orden_de_trabajo.empresa_cliente_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_orden_de_trabajo_path(@orden_de_trabajo) %> |
+<%= link_to 'Back', orden_de_trabajos_path %>

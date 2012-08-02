@@ -1,0 +1,17 @@
+<%= form_for(@odc_r) do |f| %>
+  <% if @odc_r.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@odc_r.errors.count, "error") %> prohibited this odc_r from being saved:</h2>
+
+      <ul>
+      <% @odc_r.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

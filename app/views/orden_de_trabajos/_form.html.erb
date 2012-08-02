@@ -1,0 +1,33 @@
+<%= form_for(@orden_de_trabajo) do |f| %>
+  <% if @orden_de_trabajo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orden_de_trabajo.errors.count, "error") %> prohibited this orden_de_trabajo from being saved:</h2>
+
+      <ul>
+      <% @orden_de_trabajo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_recepcion %><br />
+    <%= f.date_select :fecha_recepcion %>
+  </div>
+  <div class="field">
+    <%= f.label :num_oc_cliente %><br />
+    <%= f.text_field :num_oc_cliente %>
+  </div>
+  <div class="field">
+    <%= f.label :empresa_cliente_id %><br />
+    <%= f.text_field :empresa_cliente_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

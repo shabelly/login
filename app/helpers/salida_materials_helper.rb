@@ -1,0 +1,2 @@
+module SalidaMaterialsHelper
+end

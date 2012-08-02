@@ -1,0 +1,27 @@
+<h1>Listing cheques</h1>
+
+<table>
+  <tr>
+    <th>Fecha</th>
+    <th>Numero</th>
+    <th>Banco</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cheques.each do |cheque| %>
+  <tr>
+    <td><%= cheque.fecha %></td>
+    <td><%= cheque.numero %></td>
+    <td><%= cheque.banco %></td>
+    <td><%= link_to 'Show', cheque %></td>
+    <td><%= link_to 'Edit', edit_cheque_path(cheque) %></td>
+    <td><%= link_to 'Destroy', cheque, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cheque', new_cheque_path %>

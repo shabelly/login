@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fecha: 2012-07-30
+  numero: MyString
+  banco: MyString
+
+two:
+  fecha: 2012-07-30
+  numero: MyString
+  banco: MyString

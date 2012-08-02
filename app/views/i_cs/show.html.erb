@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @i_c.cliente_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @i_c.item_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_i_c_path(@i_c) %> |
+<%= link_to 'Back', i_cs_path %>

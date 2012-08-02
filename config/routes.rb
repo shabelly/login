@@ -1,4 +1,55 @@
 Login::Application.routes.draw do |map|
+
+  resources :i_cs
+
+  resources :clientes
+
+  resources :empresas
+
+  resources :telefono_empresa_clientes
+
+  resources :orden_de_trabajos
+
+  resources :i_sms
+
+  resources :a_us
+
+  resources :ii_as
+
+  resources :telefono_personas
+
+  resources :telefono_proveedors
+
+  resources :ii_is
+
+  resources :salida_materials
+
+  resources :em_is
+
+  resources :odc_is
+
+  resources :odc_rs
+
+  resources :r_is
+
+  resources :actividads
+
+  resources :inventarios
+
+  resources :instancia_items
+
+  resources :requisicions
+
+  resources :entrada_materials
+
+  resources :fp_odcs
+
+  resources :cheques
+
+  resources :efectivos
+
+  resources :orden_de_compras
+
   get "home/index"
 
   resources :tipo_items
@@ -6,8 +57,6 @@ Login::Application.routes.draw do |map|
   resources :modelos
 
   resources :seccions
-
-  resources :documentos
 
   resources :proveedors
 

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id orden de compra:</b>
+  <%= @entrada_material.id_orden_de_compra %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @entrada_material.fecha %>
+</p>
+
+<p>
+  <b>Numorden:</b>
+  <%= @entrada_material.numorden %>
+</p>
+
+<p>
+  <b>Num factura:</b>
+  <%= @entrada_material.num_factura %>
+</p>
+
+<p>
+  <b>Num ot:</b>
+  <%= @entrada_material.num_ot %>
+</p>
+
+<p>
+  <b>Num guia:</b>
+  <%= @entrada_material.num_guia %>
+</p>
+
+<p>
+  <b>Obsevaciones:</b>
+  <%= @entrada_material.obsevaciones %>
+</p>
+
+<p>
+  <b>Id usuario:</b>
+  <%= @entrada_material.id_usuario %>
+</p>
+
+<p>
+  <b>Vb jefe depto:</b>
+  <%= @entrada_material.vb_jefe_depto %>
+</p>
+
+
+<%= link_to 'Edit', edit_entrada_material_path(@entrada_material) %> |
+<%= link_to 'Back', entrada_materials_path %>

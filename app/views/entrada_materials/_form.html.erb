@@ -1,0 +1,53 @@
+<%= form_for(@entrada_material) do |f| %>
+  <% if @entrada_material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrada_material.errors.count, "error") %> prohibited this entrada_material from being saved:</h2>
+
+      <ul>
+      <% @entrada_material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_orden_de_compra %><br />
+    <%= f.text_field :id_orden_de_compra %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :numorden %><br />
+    <%= f.text_field :numorden %>
+  </div>
+  <div class="field">
+    <%= f.label :num_factura %><br />
+    <%= f.text_field :num_factura %>
+  </div>
+  <div class="field">
+    <%= f.label :num_ot %><br />
+    <%= f.text_field :num_ot %>
+  </div>
+  <div class="field">
+    <%= f.label :num_guia %><br />
+    <%= f.text_field :num_guia %>
+  </div>
+  <div class="field">
+    <%= f.label :obsevaciones %><br />
+    <%= f.text_field :obsevaciones %>
+  </div>
+  <div class="field">
+    <%= f.label :id_usuario %><br />
+    <%= f.text_field :id_usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :vb_jefe_depto %><br />
+    <%= f.check_box :vb_jefe_depto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

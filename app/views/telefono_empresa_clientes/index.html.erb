@@ -1,0 +1,25 @@
+<h1>Listing telefono_empresa_clientes</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Fono</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @telefono_empresa_clientes.each do |telefono_empresa_cliente| %>
+  <tr>
+    <td><%= telefono_empresa_cliente.nombre %></td>
+    <td><%= telefono_empresa_cliente.fono %></td>
+    <td><%= link_to 'Show', telefono_empresa_cliente %></td>
+    <td><%= link_to 'Edit', edit_telefono_empresa_cliente_path(telefono_empresa_cliente) %></td>
+    <td><%= link_to 'Destroy', telefono_empresa_cliente, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Telefono empresa cliente', new_telefono_empresa_cliente_path %>

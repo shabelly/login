@@ -1,0 +1,21 @@
+<h1>Listing i_sms</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @i_sms.each do |i_sm| %>
+  <tr>
+    <td><%= link_to 'Show', i_sm %></td>
+    <td><%= link_to 'Edit', edit_i_sm_path(i_sm) %></td>
+    <td><%= link_to 'Destroy', i_sm, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New I sm', new_i_sm_path %>

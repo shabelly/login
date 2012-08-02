@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Num orden:</b>
+  <%= @orden_de_compra.num_orden %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @orden_de_compra.fecha %>
+</p>
+
+<p>
+  <b>Neto:</b>
+  <%= @orden_de_compra.neto %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @orden_de_compra.total %>
+</p>
+
+<p>
+  <b>Id proveedor:</b>
+  <%= @orden_de_compra.id_proveedor %>
+</p>
+
+
+<%= link_to 'Edit', edit_orden_de_compra_path(@orden_de_compra) %> |
+<%= link_to 'Back', orden_de_compras_path %>

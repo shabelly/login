@@ -1,0 +1,2 @@
+module FormaPagoHelper
+end

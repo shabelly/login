@@ -1,0 +1,31 @@
+<h1>Listing orden_de_compras</h1>
+
+<table>
+  <tr>
+    <th>Num orden</th>
+    <th>Fecha</th>
+    <th>Neto</th>
+    <th>Total</th>
+    <th>Id proveedor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orden_de_compras.each do |orden_de_compra| %>
+  <tr>
+    <td><%= orden_de_compra.num_orden %></td>
+    <td><%= orden_de_compra.fecha %></td>
+    <td><%= orden_de_compra.neto %></td>
+    <td><%= orden_de_compra.total %></td>
+    <td><%= orden_de_compra.id_proveedor %></td>
+    <td><%= link_to 'Show', orden_de_compra %></td>
+    <td><%= link_to 'Edit', edit_orden_de_compra_path(orden_de_compra) %></td>
+    <td><%= link_to 'Destroy', orden_de_compra, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Orden de compra', new_orden_de_compra_path %>

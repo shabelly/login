@@ -1,0 +1,29 @@
+<h1>Listing orden_de_trabajos</h1>
+
+<table>
+  <tr>
+    <th>Descripcion</th>
+    <th>Fecha recepcion</th>
+    <th>Num oc cliente</th>
+    <th>Empresa cliente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orden_de_trabajos.each do |orden_de_trabajo| %>
+  <tr>
+    <td><%= orden_de_trabajo.descripcion %></td>
+    <td><%= orden_de_trabajo.fecha_recepcion %></td>
+    <td><%= orden_de_trabajo.num_oc_cliente %></td>
+    <td><%= orden_de_trabajo.empresa_cliente_id %></td>
+    <td><%= link_to 'Show', orden_de_trabajo %></td>
+    <td><%= link_to 'Edit', edit_orden_de_trabajo_path(orden_de_trabajo) %></td>
+    <td><%= link_to 'Destroy', orden_de_trabajo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Orden de trabajo', new_orden_de_trabajo_path %>

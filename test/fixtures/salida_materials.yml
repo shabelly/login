@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  num_ot: 1
+  centro_costo: MyString
+  fecha: 2012-08-01
+  observacion: 2012-08-01
+  usuario_id_d: 1
+  usuario_id_s: 1
+
+two:
+  num_ot: 1
+  centro_costo: MyString
+  fecha: 2012-08-01
+  observacion: 2012-08-01
+  usuario_id_d: 1
+  usuario_id_s: 1

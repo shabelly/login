@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  oti: 1
+  fecha: 2012-07-31
+  descripcion: MyString
+  id_usuario: 1
+
+two:
+  oti: 1
+  fecha: 2012-07-31
+  descripcion: MyString
+  id_usuario: 1

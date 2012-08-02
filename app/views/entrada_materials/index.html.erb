@@ -1,0 +1,39 @@
+<h1>Listing entrada_materials</h1>
+
+<table>
+  <tr>
+    <th>Id orden de compra</th>
+    <th>Fecha</th>
+    <th>Numorden</th>
+    <th>Num factura</th>
+    <th>Num ot</th>
+    <th>Num guia</th>
+    <th>Obsevaciones</th>
+    <th>Id usuario</th>
+    <th>Vb jefe depto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entrada_materials.each do |entrada_material| %>
+  <tr>
+    <td><%= entrada_material.id_orden_de_compra %></td>
+    <td><%= entrada_material.fecha %></td>
+    <td><%= entrada_material.numorden %></td>
+    <td><%= entrada_material.num_factura %></td>
+    <td><%= entrada_material.num_ot %></td>
+    <td><%= entrada_material.num_guia %></td>
+    <td><%= entrada_material.obsevaciones %></td>
+    <td><%= entrada_material.id_usuario %></td>
+    <td><%= entrada_material.vb_jefe_depto %></td>
+    <td><%= link_to 'Show', entrada_material %></td>
+    <td><%= link_to 'Edit', edit_entrada_material_path(entrada_material) %></td>
+    <td><%= link_to 'Destroy', entrada_material, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entrada material', new_entrada_material_path %>

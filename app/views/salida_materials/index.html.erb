@@ -1,0 +1,33 @@
+<h1>Listing salida_materials</h1>
+
+<table>
+  <tr>
+    <th>Num ot</th>
+    <th>Centro costo</th>
+    <th>Fecha</th>
+    <th>Observacion</th>
+    <th>Usuario id d</th>
+    <th>Usuario id s</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @salida_materials.each do |salida_material| %>
+  <tr>
+    <td><%= salida_material.num_ot %></td>
+    <td><%= salida_material.centro_costo %></td>
+    <td><%= salida_material.fecha %></td>
+    <td><%= salida_material.observacion %></td>
+    <td><%= salida_material.usuario_id_d %></td>
+    <td><%= salida_material.usuario_id_s %></td>
+    <td><%= link_to 'Show', salida_material %></td>
+    <td><%= link_to 'Edit', edit_salida_material_path(salida_material) %></td>
+    <td><%= link_to 'Destroy', salida_material, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Salida material', new_salida_material_path %>

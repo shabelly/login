@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  num_orden: MyString
+  fecha: 2012-07-30
+  neto: 1
+  total: 1
+  id_proveedor: MyString
+
+two:
+  num_orden: MyString
+  fecha: 2012-07-30
+  neto: 1
+  total: 1
+  id_proveedor: MyString

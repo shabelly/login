@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Oti:</b>
+  <%= @requisicion.oti %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @requisicion.fecha %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @requisicion.descripcion %>
+</p>
+
+<p>
+  <b>Id usuario:</b>
+  <%= @requisicion.id_usuario %>
+</p>
+
+
+<%= link_to 'Edit', edit_requisicion_path(@requisicion) %> |
+<%= link_to 'Back', requisicions_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fecha inicio:</b>
+  <%= @a_u.fecha_inicio %>
+</p>
+
+<p>
+  <b>Fecha termino:</b>
+  <%= @a_u.fecha_termino %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @a_u.estado %>
+</p>
+
+<p>
+  <b>Observacion:</b>
+  <%= @a_u.observacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_a_u_path(@a_u) %> |
+<%= link_to 'Back', a_us_path %>

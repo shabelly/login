@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fecha_inicio: 2012-08-02
+  fecha_termino: 2012-08-02
+  estado: MyString
+  observacion: MyText
+
+two:
+  fecha_inicio: 2012-08-02
+  fecha_termino: 2012-08-02
+  estado: MyString
+  observacion: MyText

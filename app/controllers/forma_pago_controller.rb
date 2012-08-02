@@ -1,0 +1,2 @@
+class FormaPagoController < ApplicationController
+end

@@ -1,0 +1,23 @@
+<h1>Listing fp_odcs</h1>
+
+<table>
+  <tr>
+    <th>Fecha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fp_odcs.each do |fp_odc| %>
+  <tr>
+    <td><%= fp_odc.fecha %></td>
+    <td><%= link_to 'Show', fp_odc %></td>
+    <td><%= link_to 'Edit', edit_fp_odc_path(fp_odc) %></td>
+    <td><%= link_to 'Destroy', fp_odc, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fp odc', new_fp_odc_path %>

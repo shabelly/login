@@ -1,0 +1,21 @@
+<h1>Listing ii_is</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ii_is.each do |ii_i| %>
+  <tr>
+    <td><%= link_to 'Show', ii_i %></td>
+    <td><%= link_to 'Edit', edit_ii_i_path(ii_i) %></td>
+    <td><%= link_to 'Destroy', ii_i, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ii i', new_ii_i_path %>

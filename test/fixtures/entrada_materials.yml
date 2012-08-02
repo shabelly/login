@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id_orden_de_compra: 1
+  fecha: 2012-07-31
+  numorden: 1
+  num_factura: 1
+  num_ot: 1
+  num_guia: 1
+  obsevaciones: MyString
+  id_usuario: 1
+  vb_jefe_depto: false
+
+two:
+  id_orden_de_compra: 1
+  fecha: 2012-07-31
+  numorden: 1
+  num_factura: 1
+  num_ot: 1
+  num_guia: 1
+  obsevaciones: MyString
+  id_usuario: 1
+  vb_jefe_depto: false

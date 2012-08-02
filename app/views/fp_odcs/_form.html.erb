@@ -1,0 +1,21 @@
+<%= form_for(@fp_odc) do |f| %>
+  <% if @fp_odc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fp_odc.errors.count, "error") %> prohibited this fp_odc from being saved:</h2>
+
+      <ul>
+      <% @fp_odc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

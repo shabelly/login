@@ -1,0 +1,41 @@
+<%= form_for(@salida_material) do |f| %>
+  <% if @salida_material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@salida_material.errors.count, "error") %> prohibited this salida_material from being saved:</h2>
+
+      <ul>
+      <% @salida_material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :num_ot %><br />
+    <%= f.text_field :num_ot %>
+  </div>
+  <div class="field">
+    <%= f.label :centro_costo %><br />
+    <%= f.text_field :centro_costo %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :observacion %><br />
+    <%= f.date_select :observacion %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id_d %><br />
+    <%= f.text_field :usuario_id_d %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id_s %><br />
+    <%= f.text_field :usuario_id_s %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

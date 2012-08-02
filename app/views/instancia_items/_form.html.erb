@@ -1,0 +1,25 @@
+<%= form_for(@instancia_item) do |f| %>
+  <% if @instancia_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instancia_item.errors.count, "error") %> prohibited this instancia_item from being saved:</h2>
+
+      <ul>
+      <% @instancia_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_item %><br />
+    <%= f.text_field :id_item %>
+  </div>
+  <div class="field">
+    <%= f.label :corr %><br />
+    <%= f.text_field :corr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@requisicion) do |f| %>
+  <% if @requisicion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@requisicion.errors.count, "error") %> prohibited this requisicion from being saved:</h2>
+
+      <ul>
+      <% @requisicion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :oti %><br />
+    <%= f.text_field :oti %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :id_usuario %><br />
+    <%= f.text_field :id_usuario %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

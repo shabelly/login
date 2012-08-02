@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  descripcion: MyString
+  fecha_recepcion: 2012-08-02
+  num_oc_cliente: 1
+  empresa_cliente_id: 1
+
+two:
+  descripcion: MyString
+  fecha_recepcion: 2012-08-02
+  num_oc_cliente: 1
+  empresa_cliente_id: 1

@@ -1,0 +1,29 @@
+<h1>Listing a_us</h1>
+
+<table>
+  <tr>
+    <th>Fecha inicio</th>
+    <th>Fecha termino</th>
+    <th>Estado</th>
+    <th>Observacion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @a_us.each do |a_u| %>
+  <tr>
+    <td><%= a_u.fecha_inicio %></td>
+    <td><%= a_u.fecha_termino %></td>
+    <td><%= a_u.estado %></td>
+    <td><%= a_u.observacion %></td>
+    <td><%= link_to 'Show', a_u %></td>
+    <td><%= link_to 'Edit', edit_a_u_path(a_u) %></td>
+    <td><%= link_to 'Destroy', a_u, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New A u', new_a_u_path %>

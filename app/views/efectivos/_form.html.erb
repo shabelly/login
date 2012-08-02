@@ -1,0 +1,21 @@
+<%= form_for(@efectivo) do |f| %>
+  <% if @efectivo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@efectivo.errors.count, "error") %> prohibited this efectivo from being saved:</h2>
+
+      <ul>
+      <% @efectivo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

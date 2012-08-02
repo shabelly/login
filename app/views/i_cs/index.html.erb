@@ -1,0 +1,25 @@
+<h1>Listing i_cs</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @i_cs.each do |i_c| %>
+  <tr>
+    <td><%= i_c.cliente_id %></td>
+    <td><%= i_c.item_id %></td>
+    <td><%= link_to 'Show', i_c %></td>
+    <td><%= link_to 'Edit', edit_i_c_path(i_c) %></td>
+    <td><%= link_to 'Destroy', i_c, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New I c', new_i_c_path %>

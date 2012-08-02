@@ -1,0 +1,21 @@
+<h1>Listing odc_rs</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @odc_rs.each do |odc_r| %>
+  <tr>
+    <td><%= link_to 'Show', odc_r %></td>
+    <td><%= link_to 'Edit', edit_odc_r_path(odc_r) %></td>
+    <td><%= link_to 'Destroy', odc_r, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Odc r', new_odc_r_path %>
