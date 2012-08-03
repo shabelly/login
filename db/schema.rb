@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802201722) do
+ActiveRecord::Schema.define(:version => 20120803185211) do
 
   create_table "a_us", :force => true do |t|
     t.date     "fecha_inicio"
@@ -46,10 +46,13 @@ ActiveRecord::Schema.define(:version => 20120802201722) do
   end
 
   create_table "clientes", :force => true do |t|
-    t.integer  "orden_de_trabajo_id"
-    t.integer  "empresa_id"
+    t.string   "rut"
+    t.string   "nombre"
+    t.string   "direccion"
+    t.string   "ciudad"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
   end
 
   create_table "efectivos", :force => true do |t|
@@ -64,15 +67,6 @@ ActiveRecord::Schema.define(:version => 20120802201722) do
     t.datetime "updated_at"
     t.integer  "item_id"
     t.integer  "entrada_material_id"
-  end
-
-  create_table "empresas", :force => true do |t|
-    t.string   "rut"
-    t.string   "nombre"
-    t.string   "direccion"
-    t.string   "ciudad"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "entrada_materials", :force => true do |t|
@@ -229,7 +223,7 @@ ActiveRecord::Schema.define(:version => 20120802201722) do
     t.string   "descripcion"
     t.date     "fecha_recepcion"
     t.integer  "num_oc_cliente"
-    t.integer  "empresa_id"
+    t.integer  "cliente_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -249,6 +243,11 @@ ActiveRecord::Schema.define(:version => 20120802201722) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "empresa_id"
+    t.string   "rut"
+    t.string   "nombre"
+    t.string   "ciudad"
+    t.string   "direccion"
+    t.string   "pais"
   end
 
   create_table "r_is", :force => true do |t|
@@ -286,7 +285,7 @@ ActiveRecord::Schema.define(:version => 20120802201722) do
     t.string   "nombre"
   end
 
-  create_table "telefono_empresas", :force => true do |t|
+  create_table "telefono_clientes", :force => true do |t|
     t.string   "nombre"
     t.string   "fono"
     t.datetime "created_at"

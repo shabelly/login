@@ -2,12 +2,8 @@
 
 <table>
   <tr>
-    <th>Codigo</th>
-    <th>Nombre</th>
-    <th>Direccion</th>
-    <th>Telefono</th>
-    <th>Ciudad</th>
-    <th>Pais</th>
+    <th>empresa_id</th>
+
     <th></th>
     <th></th>
     <th></th>
@@ -15,12 +11,8 @@
 
 <% @proveedors.each do |proveedor| %>
   <tr>
-    <td><%= proveedor.codigo %></td>
-    <td><%= proveedor.nombre %></td>
-    <td><%= proveedor.direccion %></td>
-    <td><%= proveedor.telefono %></td>
-    <td><%= proveedor.ciudad %></td>
-    <td><%= proveedor.pais %></td>
+    <td><%= proveedor.empresa_id %></td>
+
     <td><%= link_to 'Show', proveedor %></td>
     <td><%= link_to 'Edit', edit_proveedor_path(proveedor) %></td>
     <td><%= link_to 'Destroy', proveedor, :confirm => 'Are you sure?', :method => :delete %></td>

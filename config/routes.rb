@@ -4,8 +4,6 @@ Login::Application.routes.draw do |map|
 
   resources :clientes
 
-  resources :empresas
-
   resources :telefono_empresa_clientes
 
   resources :orden_de_trabajos
