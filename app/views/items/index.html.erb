@@ -9,13 +9,12 @@ $(document).ready(
 
 <table id="listar">
   <tr>
-    <th>Codigo</th>
+    <th>Estado</th>
     <th>Nombre</th>
     <th>Sección codigo</th>
     <th>Marca</th>
     <th>Unidad codigo</th>
     <th>Proveedor codigo</th>
-    <th>Documento codigo</th>
     <th>Medida</th>
     <th></th>
     <th></th>
@@ -24,13 +23,12 @@ $(document).ready(
 
 <% @items.each do |item| %>
   <tr>
-    <td><%= item.codigo %></td>
+    <td><%= item.estado %></td>
     <td><%= item.nombre %></td>
     <td><%= item.seccion_id %></td>
     <td><%= item.marca %></td>
     <td><%= item.unidad_id %></td>
     <td><%= item.proveedor_id %></td>
-    <td><%= item.documento_id %></td>
     <td><%= item.medida %></td>
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>

@@ -10,16 +10,7 @@
     <%= f.text_field :email %>
   </p>
 	  <p>
-	
-<% for cargo in Cargo.find(:all)%>  
-	<div>
-	<%= f.radio_button :cargo_nombre, cargo.nombre %>
-	<%= label_tag (cargo.nombre)%>
-
-	</-->
-	</div>
- <% end%>
-  	
+	  	
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </p>
